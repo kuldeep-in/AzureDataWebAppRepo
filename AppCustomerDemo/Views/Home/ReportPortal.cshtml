@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewData["Title"] = "ReportPortal";
+}
+
+<h1 class="text-center">Report Portal</h1>
+
+<button class="tablink" onclick="openReport('powerbi', this, '#555')" id="defaultOpen">PowerBI Report</button>
+<button class="tablink" onclick="openReport('excel', this, 'green')">Excel Report</button>
+
+<div id="powerbi" class="tabcontent">
+
+    <table class="table table-bordered" style="color:white">
+        <thead>
+            <tr>
+                <th colspan="2">
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Report A
+                </td>
+                <td>
+                    <div class="col-md-3">
+                        <iframe width="600" height="300" id="frm2"
+                                src="https://msit.powerbi.com/reportEmbed?reportId=fc0c3132-7484-43ba-8ff6-d05a6a2c0d46&autoAuth=true&ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9kZi1tc2l0LXNjdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"
+                                frameborder="0">
+                        </iframe>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Report B
+                </td>
+                <td>
+                    <div class="col-md-3">
+                        <iframe width="600" height="300" id="frm2"
+                                src="https://msit.powerbi.com/reportEmbed?reportId=fc0c3132-7484-43ba-8ff6-d05a6a2c0d46&autoAuth=true&ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9kZi1tc2l0LXNjdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"
+                                frameborder="0">
+                        </iframe>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div id="excel" class="tabcontent">
+
+    <div>
+        <img src="~/images/excelImage.png" style="padding:20px; height:400px;" />
+    </div>
+    <div>
+        <div>
+            <span class="glyphicon glyphicon-download-alt"></span>
+        </div>
+        <div>
+            <span class="glyphicon glyphicon-file"></span>
+        </div>
+        <div>
+            <span class="glyphicon glyphicon-upload"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openReport(cityName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(cityName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+<style>
+    /* Style the tab buttons */
+    .tablink {
+        background-color: #969696;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 50%;
+    }
+
+        /* Change background color of buttons on hover */
+        .tablink:hover {
+            background-color: #777;
+        }
+
+    /* Set default styles for tab content */
+    .tabcontent {
+        color: white;
+        display: none;
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Style each tab content individually */
+    #powerbi {
+        background-color: #555;
+    }
+
+    #excel {
+        background-color: green;
+    }
+
+</style>
+

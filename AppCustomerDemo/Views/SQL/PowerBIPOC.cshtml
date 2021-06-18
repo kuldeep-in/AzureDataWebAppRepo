@@ -1,0 +1,62 @@
+﻿@model AppCustomerDemo.Models.Order
+
+@{
+    ViewData["Title"] = "PowerBI";
+}
+
+<h1>Power BI</h1>
+
+@*<select onchange="changeVal(this.value)">
+    <option value="Choose" selected="selected">Choose</option>
+    <option value="Ap">Apple</option>
+    <option value="Or">Orange</option>
+</select>*@
+
+<table>
+    <tr class="">
+        @*<td>
+            <iframe width="600" height="500" id="frm1"
+                    src="https://msit.powerbi.com/view?r=eyJrIjoiMTM2MGE5NTctOTJlOS00ZTUxLWJkZjQtM2QzMGE3ZmU3MjZlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9"
+                    frameborder="0">
+            </iframe>
+        </td>*@
+        <td>
+
+            @*<div class="col-md-3">
+            <iframe width="600" height="500" id="frm2"
+                    src="https://msit.powerbi.com/view?r=eyJrIjoiZDBkNmFmNmMtZjk2My00YWMwLWJmZWMtYjZmYjJiZDU1Y2ZiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9"
+                    frameborder="0">
+            </iframe>
+        </div>*@
+
+            <div class="col-md-3">
+                <iframe width="600" height="500" id="frm2"
+                        src="https://msit.powerbi.com/reportEmbed?reportId=fc0c3132-7484-43ba-8ff6-d05a6a2c0d46&autoAuth=true&ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9kZi1tc2l0LXNjdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"
+                        frameborder="0">
+                </iframe>
+            </div>
+        </td>
+
+
+</table>
+@*<input type="button"
+       id="btn"
+       value="Refresh" />*@
+
+<h1>Some Static page content</h1>
+
+<script>
+
+    function changeVal(opt) {
+        //var element = document.getElementById("url");
+        //element.value = language;
+        //element.innerHTML = language;
+        document.getElementById('frm1').src += '';
+        document.getElementById('frm2').src += '';
+    }
+
+    function reload() {
+        document.getElementById('frm2').src += '';
+    }
+    btn.onclick = reload;
+</script> 

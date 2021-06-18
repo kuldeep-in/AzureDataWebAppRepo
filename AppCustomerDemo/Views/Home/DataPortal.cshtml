@@ -1,0 +1,254 @@
+﻿
+@{
+    ViewData["Title"] = "DataPortal";
+}
+
+<h1 class="text-center">Data Portal</h1>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h3 class="text-center">Employee</h3>
+
+        <p class="text-body" style="padding:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ligula, pretium non ligula sit amet, dignissim eleifend libero. Duis porttitor, odio ac elementum iaculis, tortor orci convallis nulla, quis lobortis mauris orci quis sapien. Mauris vel tortor vel quam vehicula hendrerit eget in ligula.</p>
+
+        <div class="btn btn-primary"><a href="/Storage" style="color:white">Go To Employees</a></div>
+        
+    </div>
+
+    <div class="col-md-4">
+        <h3 class="text-center">Project</h3>
+
+        <p class="text-body" style="padding:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ligula, pretium non ligula sit amet, dignissim eleifend libero. Duis porttitor, odio ac elementum iaculis, tortor orci convallis nulla, quis lobortis mauris orci quis sapien. Mauris vel tortor vel quam vehicula hendrerit eget in ligula.</p>
+
+        <div class="btn btn-primary"><a href="/Cosmos" style="color:white">Go To Projects</a></div>
+    </div>
+
+    <div class="col-md-4">
+        <h3 class="text-center">Order</h3>
+
+        <p class="text-body" style="padding:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ligula, pretium non ligula sit amet, dignissim eleifend libero. Duis porttitor, odio ac elementum iaculis, tortor orci convallis nulla, quis lobortis mauris orci quis sapien. Mauris vel tortor vel quam vehicula hendrerit eget in ligula.</p>
+
+        <div class="btn btn-primary"><a href="/SQL" style="color:white">Go To Orders</a></div>
+    </div>
+</div>
+@*<button class="tablink" onclick="openData('employee', this, '#236bff')" id="defaultOpen">Employee</button>
+    <button class="tablink" onclick="openData('project', this, 'green')" >Project</button>
+    <button class="tablink" onclick="openData('order', this, '#236bff')">Order</button>
+
+    <div id="employee" class="tabcontent">
+
+        <p class="text-body" style="padding:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ligula, pretium non ligula sit amet, dignissim eleifend libero. Duis porttitor, odio ac elementum iaculis, tortor orci convallis nulla, quis lobortis mauris orci quis sapien. Mauris vel tortor vel quam vehicula hendrerit eget in ligula.</p>
+
+        <div class="btn btn-primary" href="/Storage">Go To Employee</div>
+    </div>
+
+    <div id="project" class="tabcontent">
+
+        <table class="table table-bordered" style="color:white">
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    <th>
+                        hmm.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayNameFor(model => model.Airline)
+                    </th>
+                    <th>
+                        hmm.DisplayName("Flight")
+                    </th>
+                    <th>
+                        hmm.DisplayNameFor(model => model.From)
+                    </th>
+                    <th class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayNameFor(model => model.To)
+                    </th>
+                    <th class="d-none d-sm-table-cell">
+                        hmm.DisplayNameFor(model => model.STD)
+                    </th>
+                    <th class="d-none d-sm-table-cell">
+                        hmm.DisplayNameFor(model => model.ATD)
+                    </th>
+                    <th>
+                        hmm.DisplayNameFor(model => model.STA)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+                        hmm.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayFor(modelItem => item.Airline)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.FlightNumber)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.From)
+                    </td>
+                    <td class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayFor(modelItem => item.To)
+                    </td>
+                    <td class="d-none d-sm-table-cell">
+                        hmm.DisplayFor(modelItem => item.STD)
+                    </td>
+                    <td class="d-none d-sm-table-cell">
+                        hmm.DisplayFor(modelItem => item.ATD)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.STA)
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div id="order" class="tabcontent">
+
+        <table class="table table-bordered" style="color:white">
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    <th>
+                        hmm.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayNameFor(model => model.Airline)
+                    </th>
+                    <th>
+                        hmm.DisplayName("Flight")
+                    </th>
+                    <th>
+                        hmm.DisplayNameFor(model => model.From)
+                    </th>
+                    <th class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayNameFor(model => model.To)
+                    </th>
+                    <th class="d-none d-sm-table-cell">
+                        hmm.DisplayNameFor(model => model.STD)
+                    </th>
+                    <th class="d-none d-sm-table-cell">
+                        hmm.DisplayNameFor(model => model.ATD)
+                    </th>
+                    <th>
+                        hmm.DisplayNameFor(model => model.STA)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+                        hmm.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayFor(modelItem => item.Airline)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.FlightNumber)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.From)
+                    </td>
+                    <td class="d-none d-lg-block d-xl-block">
+                        hmm.DisplayFor(modelItem => item.To)
+                    </td>
+                    <td class="d-none d-sm-table-cell">
+                        hmm.DisplayFor(modelItem => item.STD)
+                    </td>
+                    <td class="d-none d-sm-table-cell">
+                        hmm.DisplayFor(modelItem => item.ATD)
+                    </td>
+                    <td>
+                        hmm.DisplayFor(modelItem => item.STA)
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        function openData(cityName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(cityName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <style>
+        /* Style the tab buttons */
+        .tablink {
+            background-color: #969696;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 33.3%;
+        }
+
+            /* Change background color of buttons on hover */
+            .tablink:hover {
+                background-color: #777;
+            }
+
+        /* Set default styles for tab content */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Style each tab content individually */
+        #day0 {
+            background-color: #236bff;
+        }
+
+        #day1 {
+            background-color: green;
+        }
+
+        #day2 {
+            background-color: #236bff;
+        }
+    </style>*@
