@@ -10,6 +10,6 @@ namespace AppCustomerDemo.SQLService
         {
         }
 
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> DataPortal_Orders { get; set; }
     }
 }
