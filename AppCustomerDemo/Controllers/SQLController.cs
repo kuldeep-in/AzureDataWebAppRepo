@@ -22,7 +22,7 @@ namespace AppCustomerDemo.Controllers
         [ActionName("Index")]
         public IActionResult Index()
         {
-            return View(_dbContext.Orders.ToList());
+            return View(_dbContext.DataPortal_Orders.ToList());
         }
 
         public IActionResult PowerBIPOC()
@@ -71,7 +71,7 @@ namespace AppCustomerDemo.Controllers
                 return BadRequest();
             }
 
-            Order order = await _dbContext.Orders.FindAsync(id);
+            Order order = await _dbContext.DataPortal_Orders.FindAsync(id);
             if (order == null)
             {
                 return NotFound();
@@ -92,7 +92,7 @@ namespace AppCustomerDemo.Controllers
         {
             if (ModelState.IsValid)
             {
-                _dbContext.Orders.Update(order);  // .UpdateItemAsync(item.Id, item);
+                _dbContext.DataPortal_Orders.Update(order);  // .UpdateItemAsync(item.Id, item);
                 await _dbContext.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -113,7 +113,7 @@ namespace AppCustomerDemo.Controllers
                 return BadRequest();
             }
 
-            Order order = await _dbContext.Orders.FindAsync(id);
+            Order order = await _dbContext.DataPortal_Orders.FindAsync(id);
             if (order == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace AppCustomerDemo.Controllers
         [ActionName("Details")]
         public async Task<ActionResult> DetailsAsync(long id)
         {
-            return View(await _dbContext.Orders.FindAsync(id));
+            return View(await _dbContext.DataPortal_Orders.FindAsync(id));
         }
     }
 }
